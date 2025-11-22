@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Psychology Copy Blog - Expert insights on sales funnels, landing pages, email sequences, and conversion optimization strategies powered by psychological principles.">
+    <meta name="keywords" content="Sales Funnels, Landing Pages, Email Sequences, Conversion Optimization, Psychology Copy, Blog">
+    <meta name="author" content="Psychology Copy">
+    <meta property="og:title" content="Psychology Copy Blog - Conversion Optimization Insights">
+    <meta property="og:description" content="Expert insights on sales funnels, landing pages, and conversion optimization strategies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.psychologycopy.com/blog">
+    <title>Psychology Copy Blog - Sales Funnels & Conversion Optimization Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-weight: 300;
+        }
+        
+        .gradient-btn {
+            background: linear-gradient(135deg, #4A90E2 0%, #357abd 100%);
+            transition: all 0.3s ease-out;
+        }
+        
+        .gradient-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(74, 144, 226, 0.3);
+            filter: brightness(1.1);
+        }
+        
+        .gradient-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 50px rgba(74, 144, 226, 0.15);
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+        }
+        
+        .hero-title {
+            font-size: clamp(3rem, 7vw, 5rem);
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+        }
+        
+        .faq-icon.rotate-180 {
+            transform: rotate(180deg);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu.hidden {
+            display: none;
+        }
+        
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(74, 144, 226, 0.05) 100%);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.2) 0%, rgba(74, 144, 226, 0.1) 100%);
+            border-radius: 12px;
+            font-size: 24px;
+            color: #4A90E2;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, rgba(74, 144, 226, 0.02) 100%);
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease-out;
+        }
+        
+        .benefit-card:hover {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(74, 144, 226, 0.05) 100%);
+            border-color: rgba(74, 144, 226, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15);
+        }
+        
+        .blog-card {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.08) 0%, rgba(74, 144, 226, 0.03) 100%);
+            border: 1px solid rgba(74, 144, 226, 0.15);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease-out;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(74, 144, 226, 0.2);
+            border-color: rgba(74, 144, 226, 0.3);
+        }
+        
+        .featured-blog-card {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(74, 144, 226, 0.05) 100%);
+            border: 2px solid rgba(74, 144, 226, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease-out;
+        }
+        
+        .featured-blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(74, 144, 226, 0.25);
+            border-color: rgba(74, 144, 226, 0.5);
+        }
+        
+        .blog-date {
+            color: #4A90E2;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        
+        .blog-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        .blog-excerpt {
+            color: #d1d5db;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        
+        .read-more-link {
+            color: #4A90E2;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease-out;
+        }
+        
+        .read-more-link:hover {
+            color: #357abd;
+            transform: translateX(4px);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border-top: 1px solid rgba(74, 144, 226, 0.1);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.15) 0%, rgba(74, 144, 226, 0.05) 100%),
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop') center/cover;
+            background-blend-mode: overlay;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.75) 100%);
+            pointer-events: none;
+        }
+        
+        .cta-section > * {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 w-full">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo" class="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-pen-fancy text-white text-lg"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight">Psychology Copy</span>
+            </a>
+            
+            <!-- Back Button -->
+            <a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-light flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i>
+                Back
+            </a>
+        </nav>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="hero-gradient py-20 md:py-28 px-8 md:px-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="hero-title text-white mb-6">
+                    Our Blog
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 font-light mb-8 leading-relaxed max-w-3xl">
+                    Deep insights into conversion psychology, sales funnel optimization, and proven strategies to transform your marketing into a high-converting machine.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+            <!-- Blog Purpose Section -->
+            <div class="mb-16 md:mb-24">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="section-title text-white mb-6">What You'll Find Here</h2>
+                    <p class="text-lg text-gray-300 font-light leading-relaxed mb-4">
+                        Our blog is dedicated to helping entrepreneurs, marketers, and business owners unlock the power of psychological principles in their marketing. We share proven strategies, case studies, and actionable insights on:
+                    </p>
+                    <ul class="space-y-3 text-gray-300 font-light">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i>
+                            <span><strong>Sales Funnel Optimization:</strong> How to structure funnels that guide prospects naturally toward purchase decisions using psychological triggers.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i>
+                            <span><strong>Conversion Psychology:</strong> Understanding the mental frameworks that influence buyer behavior and how to leverage them ethically.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i>
+                            <span><strong>Copywriting Mastery:</strong> Crafting persuasive messages that resonate with your audience and drive action.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i>
+                            <span><strong>Landing Page Design:</strong> Strategic design principles that maximize conversions and minimize friction.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i>
+                            <span><strong>Email Marketing:</strong> Building sequences that nurture leads and generate consistent revenue.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Featured Blog Post -->
+            <div class="mb-16 md:mb-24">
+                <h2 class="section-title text-white mb-12">Latest Article</h2>
+                <div class="featured-blog-card card-hover">
+                    <div class="mb-4">
+                        <span class="blog-date">
+                            <i class="fas fa-calendar-alt mr-2"></i>November 22, 2025
+                        </span>
+                    </div>
+                    <h3 class="blog-title text-white mb-6">
+                        The Psychology Behind High-Converting Sales Funnels: Principles That Drive Results
+                    </h3>
+                    <p class="blog-excerpt mb-8 leading-relaxed">
+                        Understanding psychological principles is essential for creating high-converting sales funnels. Loss aversion, social proof, scarcity, and urgency powerfully influence buyer behavior. Building trust through reciprocity, authority, and consistency transforms prospects into customers. Effective funnel design leverages these principles across awareness, consideration, and decision stages. Compelling copywriting that speaks to audience values, combined with strategic social proof and risk reversal, dramatically increases conversions. Common mistakes include overwhelming choices, generic messaging, and unaddressed objections. Continuous A/B testing reveals which psychological triggers resonate with your specific audience. By aligning your funnel with how humans naturally think and decide, you create authentic, high-performing conversion machines that generate predictable revenue.
+                    </p>
+                    <a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo/blog/the-psychology-behind-high-converting-sales-funnel.html" class="read-more-link">
+                        Read Full Article
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Posts Grid -->
+            <div>
+                <h2 class="section-title text-white mb-12">More Articles Coming Soon</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                    <!-- Placeholder Cards for Future Posts -->
+                    <div class="blog-card card-hover">
+                        <div class="h-48 bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-lg mb-6 flex items-center justify-center border border-blue-500/20">
+                            <i class="fas fa-file-alt text-blue-400/50 text-4xl"></i>
+                        </div>
+                        <div class="mb-4">
+                            <span class="blog-date">Coming Soon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">
+                            Email Sequences That Convert: A Step-by-Step Framework
+                        </h3>
+                        <p class="blog-excerpt mb-6">
+                            Learn the exact framework we use to build email sequences that nurture leads and generate consistent revenue from your list.
+                        </p>
+                        <div class="text-gray-500 font-light">
+                            Article in progress...
+                        </div>
+                    </div>
+
+                    <div class="blog-card card-hover">
+                        <div class="h-48 bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-lg mb-6 flex items-center justify-center border border-blue-500/20">
+                            <i class="fas fa-file-alt text-blue-400/50 text-4xl"></i>
+                        </div>
+                        <div class="mb-4">
+                            <span class="blog-date">Coming Soon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">
+                            Landing Page Copywriting: The Formula That Works
+                        </h3>
+                        <p class="blog-excerpt mb-6">
+                            Discover the proven copywriting formula that consistently produces high-converting landing pages across industries.
+                        </p>
+                        <div class="text-gray-500 font-light">
+                            Article in progress...
+                        </div>
+                    </div>
+
+                    <div class="blog-card card-hover">
+                        <div class="h-48 bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-lg mb-6 flex items-center justify-center border border-blue-500/20">
+                            <i class="fas fa-file-alt text-blue-400/50 text-4xl"></i>
+                        </div>
+                        <div class="mb-4">
+                            <span class="blog-date">Coming Soon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">
+                            Social Proof and Urgency: Ethical Tactics That Drive Sales
+                        </h3>
+                        <p class="blog-excerpt mb-6">
+                            Master the psychological principles of social proof and urgency to ethically influence buying decisions without manipulation.
+                        </p>
+                        <div class="text-gray-500 font-light">
+                            Article in progress...
+                        </div>
+                    </div>
+
+                    <div class="blog-card card-hover">
+                        <div class="h-48 bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-lg mb-6 flex items-center justify-center border border-blue-500/20">
+                            <i class="fas fa-file-alt text-blue-400/50 text-4xl"></i>
+                        </div>
+                        <div class="mb-4">
+                            <span class="blog-date">Coming Soon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">
+                            A/B Testing Your Funnels: What to Test and Why It Matters
+                        </h3>
+                        <p class="blog-excerpt mb-6">
+                            Learn which elements to test, how to structure your tests, and how to interpret results for maximum funnel improvement.
+                        </p>
+                        <div class="text-gray-500 font-light">
+                            Article in progress...
+                        </div>
+                    </div>
+
+                    <div class="blog-card card-hover">
+                        <div class="h-48 bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-lg mb-6 flex items-center justify-center border border-blue-500/20">
+                            <i class="fas fa-file-alt text-blue-400/50 text-4xl"></i>
+                        </div>
+                        <div class="mb-4">
+                            <span class="blog-date">Coming Soon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">
+                            Overcoming Objections: The Psychology of Handling Customer Concerns
+                        </h3>
+                        <p class="blog-excerpt mb-6">
+                            Understand the psychology behind customer objections and master the techniques to address them before they arise.
+                        </p>
+                        <div class="text-gray-500 font-light">
+                            Article in progress...
+                        </div>
+                    </div>
+
+                    <div class="blog-card card-hover">
+                        <div class="h-48 bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-lg mb-6 flex items-center justify-center border border-blue-500/20">
+                            <i class="fas fa-file-alt text-blue-400/50 text-4xl"></i>
+                        </div>
+                        <div class="mb-4">
+                            <span class="blog-date">Coming Soon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">
+                            Building Trust in Your Sales Funnel: The Authority Principle
+                        </h3>
+                        <p class="blog-excerpt mb-6">
+                            Establish yourself as an authority in your field and leverage the power of authority to dramatically increase conversions.
+                        </p>
+                        <div class="text-gray-500 font-light">
+                            Article in progress...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-20 md:py-32 px-8 md:px-16 relative">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="section-title text-white mb-6 text-4xl md:text-5xl">Ready to Transform Your Funnels?</h2>
+            <p class="text-xl text-gray-200 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+                Subscribe to our blog for the latest insights on conversion psychology, or let's work together to build your high-converting system.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo" class="gradient-btn px-10 py-4 rounded-lg text-white font-bold text-lg inline-flex items-center justify-center gap-3 hover:shadow-2xl">
+                    Get Started Now <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="mailto:hector@psychologycopy.com" class="border-2 border-white px-10 py-4 rounded-lg text-white font-bold text-lg inline-flex items-center justify-center gap-3 hover:bg-white/10 transition-all duration-300">
+                    Contact Us <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 md:py-24 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-pen-fancy text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Psychology Copy</span>
+                    </div>
+                    <p class="text-gray-400 font-light leading-relaxed mb-6">
+                        Transform your funnels into high-converting machines with psychological copywriting and conversion optimization.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 hover:bg-blue-500/40 transition-all duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 hover:bg-blue-500/40 transition-all duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 hover:bg-blue-500/40 transition-all duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 hover:bg-blue-500/40 transition-all duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services Column -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo#features" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Sales Funnels</a></li>
+                        <li><a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo#features" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Landing Pages</a></li>
+                        <li><a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo#features" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Email Sequences</a></li>
+                        <li><a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo#benefits" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Copywriting</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Column -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo#about" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">About Us</a></li>
+                        <li><a href="https://amvicioushecs.github.io/psychology-copy-2025-11-22-advyo#testimonials" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Testimonials</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Blog</a></li>
+                        <li><a href="mailto:hector@psychologycopy.com" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Column -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="border-t border-blue-500/20 pt-12">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <p class="text-gray-400 font-light text-center md:text-left">
+                        &copy; 2025 Psychology Copy. All rights reserved. | Contact: <a href="mailto:hector@psychologycopy.com" class="text-blue-400 hover:text-blue-300 transition-colors duration-300">hector@psychologycopy.com</a>
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="privacy.html" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light text-sm">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light text-sm">Terms</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-light text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
